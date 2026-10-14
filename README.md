@@ -1,14 +1,18 @@
-# ❤️ Heart Disease MLOps Project
+# Heart Disease MLOps Project
 
-## Overview
-End-to-end MLOps pipeline for heart disease prediction with **ROC-AUC 0.90**. Built with production-grade monitoring and deployment.
+## Results
+- ROC-AUC 0.90
+- API Latency 5ms
+- Prometheus metrics working
 
-## 🛠️ Tech Stack
-- **ML:** Python, Scikit-learn, Pandas
-- **API:** FastAPI + Uvicorn (avg latency ~5ms)
-- **Tracking:** MLflow (Experiment Tracking)
-- **Monitoring:** Prometheus Metrics
-- **DevOps:** Docker + Kubernetes + GitHub Actions (CI/CD)
-- **Testing:** Pytest
+## How to Run
+pip install -r requirements.txt
+uvicorn api.main:app --reload
 
-## 📁 Project Structure
+Open: http://127.0.0.1:8000/docs
+Metrics: http://127.0.0.1:8000/metrics
+
+## Sample
+age 63, sex 1, cp 3 - prediction 1 (76%)
+
+Author: Eswar - 2026
