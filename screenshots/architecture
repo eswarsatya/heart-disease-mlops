@@ -1,0 +1,25 @@
+digraph "Heart Disease MLOps" {
+	graph [fontcolor="#2D3436" fontname="Sans-Serif" fontsize=15 label="Heart Disease MLOps" nodesep=0.60 pad=2.0 rankdir=LR ranksep=0.75 splines=ortho]
+	node [fixedsize=true fontcolor="#2D3436" fontname="Sans-Serif" fontsize=13 height=1.4 imagescale=true labelloc=b shape=box style=rounded width=1.4]
+	edge [color="#7B8894"]
+	subgraph "cluster_CI/CD" {
+		graph [bgcolor="#E5F5FD" fontname="Sans-Serif" fontsize=12 label="CI/CD" labeljust=l pencolor="#AEB6BE" rankdir=LR shape=box style=rounded]
+		"5ea4ae5602fa41c4970aecd1d46d9fb9" [label="GitHub Actions" height=1.9 image="C:\Users\itp\Desktop\heart-disease-mlops\venv\Lib\site-packages\resources/onprem/ci\github-actions.png" shape=none]
+	}
+	subgraph cluster_Deployment {
+		graph [bgcolor="#E5F5FD" fontname="Sans-Serif" fontsize=12 label=Deployment labeljust=l pencolor="#AEB6BE" rankdir=LR shape=box style=rounded]
+		"2a2ba6a6e167437db40e3bc9c8d4cf57" [label=Docker height=1.9 image="C:\Users\itp\Desktop\heart-disease-mlops\venv\Lib\site-packages\resources/onprem/container\docker.png" shape=none]
+		"788673842f4d46a0bdddae503f4a6c17" [label=Kubernetes height=1.9 image="C:\Users\itp\Desktop\heart-disease-mlops\venv\Lib\site-packages\resources/onprem/compute\server.png" shape=none]
+	}
+	subgraph cluster_Serving {
+		graph [bgcolor="#E5F5FD" fontname="Sans-Serif" fontsize=12 label=Serving labeljust=l pencolor="#AEB6BE" rankdir=LR shape=box style=rounded]
+		"152e4d5968094708b781c16e3989ee60" [label="FastAPI API" height=1.9 image="C:\Users\itp\Desktop\heart-disease-mlops\venv\Lib\site-packages\resources/programming/framework\fastapi.png" shape=none]
+		"485b5bb3b6a449769428ff27789239bb" [label=Monitoring height=1.9 image="C:\Users\itp\Desktop\heart-disease-mlops\venv\Lib\site-packages\resources/onprem/monitoring\prometheus.png" shape=none]
+	}
+	"646f4c51eefd4b0b96afbf370ef90554" [label=User height=1.9 image="C:\Users\itp\Desktop\heart-disease-mlops\venv\Lib\site-packages\resources/onprem/client\user.png" shape=none]
+	"646f4c51eefd4b0b96afbf370ef90554" -> "152e4d5968094708b781c16e3989ee60" [dir=forward fontcolor="#2D3436" fontname="Sans-Serif" fontsize=13]
+	"5ea4ae5602fa41c4970aecd1d46d9fb9" -> "2a2ba6a6e167437db40e3bc9c8d4cf57" [dir=forward fontcolor="#2D3436" fontname="Sans-Serif" fontsize=13]
+	"2a2ba6a6e167437db40e3bc9c8d4cf57" -> "788673842f4d46a0bdddae503f4a6c17" [dir=forward fontcolor="#2D3436" fontname="Sans-Serif" fontsize=13]
+	"788673842f4d46a0bdddae503f4a6c17" -> "152e4d5968094708b781c16e3989ee60" [dir=forward fontcolor="#2D3436" fontname="Sans-Serif" fontsize=13]
+	"152e4d5968094708b781c16e3989ee60" -> "485b5bb3b6a449769428ff27789239bb" [dir=forward fontcolor="#2D3436" fontname="Sans-Serif" fontsize=13]
+}

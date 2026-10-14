@@ -1,0 +1,14 @@
+artifact_uri: file:///C:/Users/itp/Desktop/heart-disease-mlops/mlruns/732393950817879839/30af3e3a689e46a592411c8808916851/artifacts
+end_time: 1791997848111
+entry_point_name: ''
+experiment_id: '732393950817879839'
+lifecycle_stage: active
+run_id: 30af3e3a689e46a592411c8808916851
+run_name: LogisticRegression
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1791997847866
+status: 3
+tags: []
+user_id: itp

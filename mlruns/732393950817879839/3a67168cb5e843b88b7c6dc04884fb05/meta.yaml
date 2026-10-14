@@ -1,0 +1,14 @@
+artifact_uri: file:///C:/Users/itp/Desktop/heart-disease-mlops/mlruns/732393950817879839/3a67168cb5e843b88b7c6dc04884fb05/artifacts
+end_time: 1791997849032
+entry_point_name: ''
+experiment_id: '732393950817879839'
+lifecycle_stage: active
+run_id: 3a67168cb5e843b88b7c6dc04884fb05
+run_name: RandomForest
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1791997848127
+status: 3
+tags: []
+user_id: itp
