@@ -1,7 +1,8 @@
 # MLOps End-to-End Project Report: Heart Disease Prediction
 ## AIMLCZG523 - Assignment 01
 
-Student: Eswar Satya
+Student: Eswar Brugumalla
+Bits Id - 2025Ct05005
 GitHub Repository: https://github.com/eswarsatya/heart-disease-mlops
 Dataset: Heart Disease UCI Dataset
 Date: October 14, 2026
