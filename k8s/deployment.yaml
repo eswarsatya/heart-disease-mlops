@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: heart-api
+  name: heart-disease-api
 spec:
   replicas: 2
   selector:
@@ -14,19 +14,6 @@ spec:
     spec:
       containers:
             - name: api
-        image: heart-api:v1
-        imagePullPolicy: Never
+        image: heart-disease-api:0.1.0
         ports:
                 - containerPort: 8000
----
-apiVersion: v1
-kind: Service
-metadata:
-  name: heart-service
-spec:
-  type: LoadBalancer
-  selector:
-    app: heart-api
-  ports:
-    - port: 80
-    targetPort: 8000
